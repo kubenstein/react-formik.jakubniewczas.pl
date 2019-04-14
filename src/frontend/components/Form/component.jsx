@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Avatar from 'components/Avatar';
 
 import './styles.css';
 
 const Form = ({ email, firstName, lastName }) => (
   <div>
+    <Avatar />
+    <br />
     <span>email: </span>
     <b>{email}</b>
     <br />
