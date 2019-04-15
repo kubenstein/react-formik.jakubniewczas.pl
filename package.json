@@ -9,6 +9,7 @@
     "yarn": "1.15.2"
   },
   "scripts": {
+    "test:frontend": "mocha-webpack --watch --webpack-config ./src/webpack-tests.config.js ./src/spec/setup.js './src/**/*spec.js*' --colors",
     "dev:frontend": "webpack-dev-server --config ./src/webpack-frontend.config.js --port 3000"
   },
   "devDependencies": {
@@ -21,7 +22,11 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-react-css-modules": "^5.2.3",
     "blueimp-md5": "^2.10.0",
+    "chai": "^4.2.0",
     "css-loader": "~2.x.x",
+    "dirty-chai": "^2.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.3.0",
@@ -32,7 +37,11 @@
     "file-loader": "^3.0.1",
     "formik": "^1.5.2",
     "fs-extra": "^7.0.1",
+    "jsdom": "^14.0.0",
+    "jsdom-global": "^3.0.2",
     "mini-css-extract-plugin": "^0.5.0",
+    "mocha": "^4.1.0",
+    "mocha-webpack": "^2.0.0-beta.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prop-types": "^15.6.0",
@@ -40,6 +49,8 @@
     "react-dom": "~16.8.x",
     "resolve-url-loader": "^3.0.1",
     "sass-loader": "^7.1.0",
+    "sinon": "^7.3.1",
+    "sinon-chai": "^3.3.0",
     "style-loader": "~0.23.x",
     "webpack": "~4.29.x",
     "webpack-cli": "^3.2.3",
