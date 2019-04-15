@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import ProfileEditor from 'components/ProfileEditor';
 import Profile from 'components/Profile';
 
+import './styles.css';
+
 const App = ({ editMode }) => (
-  editMode ? <ProfileEditor /> : <Profile />
+  <div styleName="appWrapper">
+    {editMode ? <ProfileEditor /> : <Profile />}
+  </div>
 );
 
 App.propTypes = {
