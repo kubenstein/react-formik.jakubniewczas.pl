@@ -4,9 +4,10 @@ import { StateProvider } from 'lib/appState';
 
 import 'assets';
 
-import Profile from 'components/Profile';
+import App from 'components/App';
 
 const initialState = {
+  editMode: false,
   email: 'niewczas.jakub@gmail.com',
   firstName: 'Jakub',
   lastName: 'Niewczas',
@@ -15,7 +16,7 @@ const initialState = {
 
 ReactDOM.render(
   <StateProvider initialState={initialState}>
-    <Profile />
+    <App />
   </StateProvider>,
   document.getElementById('app'),
 );
