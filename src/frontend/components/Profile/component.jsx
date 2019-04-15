@@ -4,7 +4,7 @@ import Avatar from 'components/Avatar';
 
 import './styles.css';
 
-const Form = ({ email, firstName, lastName }) => (
+const Profile = ({ email, firstName, lastName }) => (
   <div>
     <Avatar />
     <br />
@@ -25,10 +25,10 @@ const Form = ({ email, firstName, lastName }) => (
   </div>
 );
 
-Form.propTypes = {
+Profile.propTypes = {
   email: PropTypes.string.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
 };
 
-export default Form;
+export default Profile;

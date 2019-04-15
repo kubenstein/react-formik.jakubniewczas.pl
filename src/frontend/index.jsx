@@ -4,7 +4,7 @@ import { StateProvider } from 'lib/appState';
 
 import 'assets';
 
-import Form from 'components/Form';
+import Profile from 'components/Profile';
 
 const initialState = {
   email: 'niewczas.jakub@gmail.com',
@@ -15,7 +15,7 @@ const initialState = {
 
 ReactDOM.render(
   <StateProvider initialState={initialState}>
-    <Form />
+    <Profile />
   </StateProvider>,
   document.getElementById('app'),
 );
