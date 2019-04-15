@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const Avatar = ({ imgSrc, fullName }) => (
-  <img src={imgSrc} alt={`${fullName} avatar`} />
+  <img
+    styleName="img"
+    src={imgSrc}
+    alt={`${fullName} avatar`}
+  />
 );
 
 Avatar.propTypes = {
