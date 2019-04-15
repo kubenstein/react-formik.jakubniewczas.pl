@@ -15,11 +15,8 @@ const ProfileEditor = ({ email, firstName, lastName, onReturnClick, onSubmit, va
   >
     {({
       values: { plainTextPassword },
-      touched: { newPassword: isNewPasswordTouched },
       errors,
       setFieldValue,
-      setFieldTouched,
-      handleChange,
     }) => (
       <Form className="profileWrapper">
         <Avatar />
@@ -67,10 +64,6 @@ const ProfileEditor = ({ email, firstName, lastName, onReturnClick, onSubmit, va
               type={plainTextPassword ? 'text' : 'password'}
               name="newPassword"
               autoComplete="off"
-              onChange={(e) => {
-                setFieldTouched('newPassword');
-                handleChange(e);
-              }}
             />
             <FunctionLink
               styleName="showPasswordBtn"
@@ -78,9 +71,7 @@ const ProfileEditor = ({ email, firstName, lastName, onReturnClick, onSubmit, va
               onClick={() => setFieldValue('plainTextPassword', !plainTextPassword)}
             />
           </div>
-          {isNewPasswordTouched && (
-            <PasswordStrengthMeter />
-          )}
+          <PasswordStrengthMeter />
         </div>
 
         <button className="actionBtn" type="submit">Submit</button>

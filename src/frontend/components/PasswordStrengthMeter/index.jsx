@@ -8,9 +8,10 @@ import Component from './component';
 const ConnectedComponent = ({ formik }) => {
   const error = getIn(formik.errors, 'newPassword');
   const value = getIn(formik.values, 'newPassword');
-
   const score = calculatePasswordScore({ value, isValid: !error });
-  return <Component score={score} />;
+  const show = value.length > 0;
+
+  return <Component score={score} show={show} />;
 };
 
 ConnectedComponent.propTypes = {
