@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'components/Avatar';
 import FunctionLink from 'components/FunctionLink';
+import PasswordStrengthMeter from 'components/PasswordStrengthMeter';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import './styles.css';
@@ -44,7 +45,7 @@ const ProfileEditor = ({ email, firstName, lastName, onCloseClick, submit, valid
           {plainTextPassword ? 'hide password' : 'see password'}
         </FunctionLink>
         {isNewPasswordTouched && (
-          <div>password strength meter</div>
+          <PasswordStrengthMeter />
         )}
         <ErrorMessage name="newPassword" component="div" />
 
