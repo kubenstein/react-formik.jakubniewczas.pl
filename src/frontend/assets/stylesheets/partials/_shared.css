@@ -1,0 +1,63 @@
+@import "../../assets/stylesheets/import";
+
+:global {
+  .profileWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 5px;
+    padding: 50px 70px;
+    background-color: $purple;
+    background-image: linear-gradient(315deg, $purple 0%, $purple-light 74%);
+    box-shadow: 0px 0px 50px -20px #000;
+  }
+
+  .actionBtn {
+    display: inline-block;
+    margin: 10px 0;
+    color: $white;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.8;
+    border: 0;
+    background: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .field {
+    margin: 10px auto;
+    width: 100%;
+
+    .label {
+      display: inline-block;
+      margin-left: 15px;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .value {
+      display: block;
+      width: 100%;
+      margin: 10px 0 5px;
+      padding: 10px 15px;
+      color: $white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

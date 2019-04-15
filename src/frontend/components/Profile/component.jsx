@@ -6,24 +6,23 @@ import FunctionLink from 'components/FunctionLink';
 import './styles.css';
 
 const Profile = ({ email, firstName, lastName, onEditClick }) => (
-  <div>
+  <div className="profileWrapper">
     <Avatar />
-    <FunctionLink onClick={onEditClick}>Edit</FunctionLink>
-    <br />
-    <span>email: </span>
-    <b>{email}</b>
-    <br />
+    <div className="field">
+      <span className="label">email: </span>
+      <span className="value">{email}</span>
+    </div>
 
-    <span>name: </span>
-    <b>{`${firstName} ${lastName}`}</b>
+    <div className="field">
+      <span className="label">name: </span>
+      <span className="value">{`${firstName} ${lastName}`}</span>
+    </div>
 
-    <br />
-    <span>email: </span>
-    <b>{email}</b>
-    <br />
-
-    <span>password: </span>
-    <b>*****</b>
+    <div className="field">
+      <span className="label">password: </span>
+      <span className="value">✲✲✲✲</span>
+    </div>
+    <FunctionLink className="actionBtn" onClick={onEditClick}>Edit Profile</FunctionLink>
   </div>
 );
 
