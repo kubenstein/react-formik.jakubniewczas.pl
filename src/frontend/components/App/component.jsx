@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProfileEditor from 'components/ProfileEditor';
 import Profile from 'components/Profile';
 
 const App = ({ editMode }) => (
-  editMode ? <h1>Edit mode</h1> : <Profile />
+  editMode ? <ProfileEditor /> : <Profile />
 );
 
 App.propTypes = {
