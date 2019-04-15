@@ -1,1 +1,18 @@
 @import "../../assets/stylesheets/import";
+
+.password {
+  position: relative;
+
+  .showPasswordBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    font-size: 20px;
+  }
+}

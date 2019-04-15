@@ -8,8 +8,8 @@ const mapStateToProps = ({ email, firstName, lastName }, _props, updateState) =>
   firstName,
   lastName,
   validate,
-  onCloseClick: () => updateState({ editMode: false }),
-  submit: (values) => {
+  onReturnClick: () => updateState({ editMode: false }),
+  onSubmit: (values) => {
     // eslint-disable-next-line no-shadow
     const { email, firstName, lastName, newPassword } = values;
     updateState({ email, firstName, lastName, editMode: false });

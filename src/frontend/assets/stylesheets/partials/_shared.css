@@ -59,5 +59,27 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    .input {
+      @extend .value;
+      border: 2px solid transparent;
+      transition: border 500ms ease-out;
+
+      &:hover {
+        border-color: $white;
+      }
+    }
+
+    .erroredInput {
+      @extend .input;
+      border: 2px solid $red-dark;
+    }
+
+    .error {
+      display: inline-block;
+      margin-left: 10px;
+      color: $red-dark;
+      font-size: 12px;
+    }
   }
 }

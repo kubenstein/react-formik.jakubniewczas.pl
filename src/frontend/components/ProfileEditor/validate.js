@@ -19,7 +19,7 @@ const lastNameValidationErrors = ({ lastName }) => {
 const newPasswordValidationErrors = ({ newPassword }) => {
   if (!newPassword) return null;
 
-  if (newPassword.length < 5) return { newPassword: 'too short, min 5' };
+  if (newPassword.length < 5) return { newPassword: 'Too short, min 5 characters' };
   return null;
 };
 
