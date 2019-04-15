@@ -10,7 +10,10 @@
   },
   "scripts": {
     "test:frontend": "mocha-webpack --watch --webpack-config ./src/webpack-tests.config.js ./src/spec/setup.js './src/**/*spec.js*' --colors",
-    "dev:frontend": "webpack-dev-server --config ./src/webpack-frontend.config.js --port 3000"
+    "dev:frontend": "webpack-dev-server --config ./src/webpack-frontend.config.js --port 3000",
+    "prod:build:frontend": "NODE_ENV=production webpack -p --config ./src/webpack-frontend.config.js",
+    "heroku-postbuild": "yarn run prod:build:frontend",
+    "server": "static frontend -a 0.0.0.0 -p $PORT"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -56,5 +59,8 @@
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "~3.1.x",
     "wolfy87-eventemitter": "^5.2.6"
+  },
+  "dependencies": {
+    "node-static": "^0.7.11"
   }
 }
