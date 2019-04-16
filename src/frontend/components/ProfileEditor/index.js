@@ -14,6 +14,9 @@ const mapStateToProps = ({ email, firstName, lastName }, _props, updateState) =>
     const { email, firstName, lastName, newPassword } = values;
     updateState({ email, firstName, lastName, editMode: false });
     if (newPassword) updateState({ password: newPassword });
+
+    // eslint-disable-next-line no-console
+    console.log({ email, firstName, lastName, newPassword });
   },
 });
 
